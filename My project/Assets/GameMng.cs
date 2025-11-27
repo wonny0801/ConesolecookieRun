@@ -1,8 +1,10 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using Button = UnityEngine.UI.Button;
 
 public class GameMng : MonoBehaviour
 {
@@ -15,7 +17,10 @@ public class GameMng : MonoBehaviour
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI ScoreText;
     [SerializeField] private Scrollbar hpScrollbar;
-     
+    [SerializeField] private GameObject GameOverUI;
+    [SerializeField] private TextMeshProUGUI GameOverScoreText;
+    [SerializeField] private Button RestartButton;
+
 
     [Header("Prefab")]
     [SerializeField] private GameObject PlayerPrefab;
@@ -28,7 +33,7 @@ public class GameMng : MonoBehaviour
     [SerializeField] private float HpDownTime;
 
     private Vector3 gSpawnPosition = new Vector3(20f, -4.5f, 0f);
-    private Vector3 cSpawnPosition = new Vector3(10f,-3.2f, 0f);
+    private Vector3 cSpawnPosition = new Vector3(10f,-3.6f, 0f);
 
     private float gTimer = 0f;
     private float cTimer = 0f;
@@ -49,30 +54,32 @@ public class GameMng : MonoBehaviour
         SpawnGround();
         hpScrollbar.enabled = true;
         hpScrollbar.size = 1.0f;
+        GameOverUI.SetActive(false);
+        Init();
+
+        RestartButton.onClick.AddListener(Restart);
+    }
+    private void Init()
+    {
+        GameScore = 0;
+        PlusScoreValue = 10;
+        MaxHp = 300f;
+        CurHp = 300f;
+        Time.timeScale = 1.0f;
     }
 
     private void Update()
     {
-        gTimer += Time.deltaTime;
-        if (gTimer > gSpawnTime)
-        {
-            SpawnGround();
-            gTimer = 0f;
-        }
-        cTimer += Time.deltaTime;
-        if(cTimer > cSpawnTime)
-        {
-            SpawnCoin();
-            cTimer = 0f;
-        }
-        HpTimer += Time.deltaTime;
-        if (HpTimer > HpDownTime)
-        {
-            HpDown();
-            HpTimer = 0f;
-        }
+        SpawnGroundUpdate();
+        SpawnCoinUpdate();
+        HpUpdate();
+  
         UpdateScoreUI();
         UpdateHpbarUI();
+
+        if (CurHp <= 0)
+            GameOver();
+        
     }
 
     private void SpawnGround()
@@ -83,7 +90,41 @@ public class GameMng : MonoBehaviour
     {
         Instantiate(CoinPrefab,cSpawnPosition, Quaternion.identity);
     }
-
+    private void HpDown()
+    {
+        if (CurHp > 0)
+        {
+            Debug.Log("Hp Down");
+            CurHp -= 10;
+        }
+    }
+    private void SpawnGroundUpdate()
+    {
+        gTimer += Time.deltaTime;
+        if (gTimer > gSpawnTime)
+        {
+            SpawnGround();
+            gTimer = 0f;
+        }
+    }
+    private void SpawnCoinUpdate()
+    {
+        cTimer += Time.deltaTime;
+        if (cTimer > cSpawnTime)
+        {
+            SpawnCoin();
+            cTimer = 0f;
+        }
+    }
+    private void HpUpdate()
+    {
+        HpTimer += Time.deltaTime;
+        if (HpTimer > HpDownTime)
+        {
+            HpDown();
+            HpTimer = 0f;
+        }
+    }
     private void UpdateScoreUI()
     {
         ScoreText.text = GameScore.ToString();
@@ -92,14 +133,16 @@ public class GameMng : MonoBehaviour
     {
         hpScrollbar.size = (CurHp / MaxHp);
     }
-
-    private void HpDown()
+    private void GameOver()
     {
-        if(CurHp > 0)
-        {
-            Debug.Log("Hp Down");
-            CurHp -= 10;
-        }
-        
+        Time.timeScale = 0f;
+        GameOverUI.SetActive(true);
+        GameOverScoreText.text = "Score : " + GameScore.ToString();
     }
+    public void Restart()
+    {
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
 }

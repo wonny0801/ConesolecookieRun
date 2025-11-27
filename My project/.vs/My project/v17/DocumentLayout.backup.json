@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\wunha\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\\uAC8C\uC784\uD504\uB85C\uC81D\uD2B8\\github\\CookieRun\\ConesolecookieRun\\My project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|c:\\users\\wunha\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\\uAC8C\uC784\uD504\uB85C\uC81D\uD2B8\\github\\cookierun\\conesolecookierun\\my project\\assets\\gamemng.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemng.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|c:\\users\\wunha\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\\uAC8C\uC784\uD504\uB85C\uC81D\uD2B8\\github\\cookierun\\conesolecookierun\\my project\\assets\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|c:\\users\\wunha\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\\uAC8C\uC784\uD504\uB85C\uC81D\uD2B8\\github\\cookierun\\conesolecookierun\\my project\\assets\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E8A91009-7186-A382-4FE4-3C21BA335F00}|Assembly-CSharp-Editor.csproj|c:\\users\\wunha\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\\uAC8C\uC784\uD504\uB85C\uC81D\uD2B8\\github\\cookierun\\conesolecookierun\\my project\\assets\\simple 2d platformer be2\\readme\\scripts\\editor\\readmeeditorbe2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8A91009-7186-A382-4FE4-3C21BA335F00}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\simple 2d platformer be2\\readme\\scripts\\editor\\readmeeditorbe2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -14,11 +26,55 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Coin.cs",
+              "DocumentMoniker": "C:\\Users\\wunha\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\\uAC8C\uC784\uD504\uB85C\uC81D\uD2B8\\github\\CookieRun\\ConesolecookieRun\\My project\\Assets\\Coin.cs",
+              "RelativeDocumentMoniker": "Assets\\Coin.cs",
+              "ToolTip": "C:\\Users\\wunha\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\\uAC8C\uC784\uD504\uB85C\uC81D\uD2B8\\github\\CookieRun\\ConesolecookieRun\\My project\\Assets\\Coin.cs",
+              "RelativeToolTip": "Assets\\Coin.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAIwBEAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T15:43:54.216Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "GameMng.cs",
+              "DocumentMoniker": "C:\\Users\\wunha\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\\uAC8C\uC784\uD504\uB85C\uC81D\uD2B8\\github\\CookieRun\\ConesolecookieRun\\My project\\Assets\\GameMng.cs",
+              "RelativeDocumentMoniker": "Assets\\GameMng.cs",
+              "ToolTip": "C:\\Users\\wunha\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\\uAC8C\uC784\uD504\uB85C\uC81D\uD2B8\\github\\CookieRun\\ConesolecookieRun\\My project\\Assets\\GameMng.cs",
+              "RelativeToolTip": "Assets\\GameMng.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAA7wGQAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T15:36:57.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\wunha\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\\uAC8C\uC784\uD504\uB85C\uC81D\uD2B8\\github\\CookieRun\\ConesolecookieRun\\My project\\Assets\\Player.cs",
+              "RelativeDocumentMoniker": "Assets\\Player.cs",
+              "ToolTip": "C:\\Users\\wunha\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\\uAC8C\uC784\uD504\uB85C\uC81D\uD2B8\\github\\CookieRun\\ConesolecookieRun\\My project\\Assets\\Player.cs",
+              "RelativeToolTip": "Assets\\Player.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAYwDMAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T15:13:26.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ReadmeEditorBE2.cs",
               "DocumentMoniker": "C:\\Users\\wunha\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\\uAC8C\uC784\uD504\uB85C\uC81D\uD2B8\\github\\CookieRun\\ConesolecookieRun\\My project\\Assets\\Simple 2D Platformer BE2\\ReadMe\\Scripts\\Editor\\ReadmeEditorBE2.cs",
               "RelativeDocumentMoniker": "Assets\\Simple 2D Platformer BE2\\ReadMe\\Scripts\\Editor\\ReadmeEditorBE2.cs",
@@ -28,10 +84,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-26T15:12:12.113Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

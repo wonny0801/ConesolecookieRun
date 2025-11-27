@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -16,9 +17,13 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
+        FixedPositionX();
         Jump();
         DoubleJump();
-       
+       if(!isGround &&  !isJump)
+        {
+            transform.Rotate(Vector3.back * 450f * Time.deltaTime);
+        }
     }
 
     private void Jump()
@@ -44,12 +49,20 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void FixedPositionX()
+    {
+        rid.transform.position = new Vector3(-7f,
+                                rid.transform.position.y,
+                                rid.transform.position.z);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Ground"))
         {
             isGround = true;
             isJump = false;
+            transform.rotation = Quaternion.identity;
         }
     }
 }

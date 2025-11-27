@@ -60,9 +60,18 @@ public class Player : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Ground"))
         {
+            Debug.Log("Ground");
             isGround = true;
             isJump = false;
             transform.rotation = Quaternion.identity;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("Enemy");
+            GameMng.CurHp -= GameMng.MaxHp / 5;
         }
     }
 }

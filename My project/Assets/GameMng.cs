@@ -1,4 +1,6 @@
+using System;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -26,18 +28,24 @@ public class GameMng : MonoBehaviour
     [SerializeField] private GameObject PlayerPrefab;
     [SerializeField] private GameObject GroundPrefab;
     [SerializeField] private GameObject CoinPrefab;
+    [SerializeField] private GameObject EnemyPrefab1;
 
     [Header("Prefab Spawn Time")]
     [SerializeField] private float gSpawnTime;
     [SerializeField] private float cSpawnTime;
+    [SerializeField] private float e1SpawnTimeMax;
     [SerializeField] private float HpDownTime;
 
     private Vector3 gSpawnPosition = new Vector3(20f, -4.5f, 0f);
     private Vector3 cSpawnPosition = new Vector3(10f,-3.6f, 0f);
+    private Vector3 eSpawnPosition = new Vector3(10f, -0.75f, 0f);
 
     private float gTimer = 0f;
     private float cTimer = 0f;
+    private float e1Timer = 0f;
     private float HpTimer = 0f;
+
+    private float e1SpawnTime = 0f;
 
     private void Awake()
     {
@@ -72,6 +80,7 @@ public class GameMng : MonoBehaviour
     {
         SpawnGroundUpdate();
         SpawnCoinUpdate();
+        SpawnEnemy1Update();
         HpUpdate();
   
         UpdateScoreUI();
@@ -89,6 +98,10 @@ public class GameMng : MonoBehaviour
     private void SpawnCoin()
     {
         Instantiate(CoinPrefab,cSpawnPosition, Quaternion.identity);
+    }
+    private void SpawnEnemy1()
+    {
+        Instantiate(EnemyPrefab1,eSpawnPosition, Quaternion.identity);
     }
     private void HpDown()
     {
@@ -114,6 +127,16 @@ public class GameMng : MonoBehaviour
         {
             SpawnCoin();
             cTimer = 0f;
+        }
+    }
+    private void SpawnEnemy1Update()
+    {
+        e1Timer += Time.deltaTime;
+        if(e1Timer > e1SpawnTime)
+        {
+            SpawnEnemy1();
+            e1Timer = 0f;
+            e1SpawnTime = (float)UnityEngine.Random.Range(1.5f,e1SpawnTime);
         }
     }
     private void HpUpdate()

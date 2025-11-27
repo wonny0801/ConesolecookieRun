@@ -752,8 +752,10 @@ MonoBehaviour:
   PlayerPrefab: {fileID: 1082054611820825640, guid: 9ace31dc5a27b244cba7ef82054d7fb1, type: 3}
   GroundPrefab: {fileID: 3028233772445417395, guid: 0f602aed9f1ab7e4db3b9c6d0c70a807, type: 3}
   CoinPrefab: {fileID: 7108846039292574803, guid: 544bbaf3877592940ae864494b31b5b5, type: 3}
+  EnemyPrefab1: {fileID: 8249799343992529374, guid: a7acee40e05267e4db379efaa6a3755c, type: 3}
   gSpawnTime: 2
   cSpawnTime: 0.1
+  e1SpawnTimeMax: 5
   HpDownTime: 1
 --- !u!4 &1874350047
 Transform:
